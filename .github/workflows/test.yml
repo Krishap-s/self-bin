@@ -21,7 +21,8 @@ jobs:
         cache-dependency-path: pyproject.toml
     - name: Install dependencies
       run: |
-        pip install '.[pytest]'
+        pip install pytest
+        pip install '.'
     - name: Run tests
       run: |
         pytest
