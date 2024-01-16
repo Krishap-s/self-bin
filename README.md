@@ -38,3 +38,9 @@ Now install the dependencies and test dependencies:
 To run the tests:
 
     pytest
+
+## TODO
+- [ ] Implement request bin functionality
+- [ ] Implement http bin functionality
+- [ ] Allow user to control using command flags
+- [ ] Update documentation
