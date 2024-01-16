@@ -1,38 +1,14 @@
-[project]
-name = "self-bin"
-version = "0.1"
-description = "Self Hosted Request Bin and HTTP Bin"
-readme = "README.md"
-authors = [{name = "Krishap"}]
-license = {text = "Apache-2.0"}
-requires-python = ">=3.8"
-classifiers = [
-    "License :: OSI Approved :: Apache Software License"
-]
-dependencies = [
-    "click",
-    "twisted",
-]
-
-[project.urls]
-Homepage = "https://github.com/Krishap-s/self-bin"
-Changelog = "https://github.com/Krishap-s/self-bin/releases"
-Issues = "https://github.com/Krishap-s/self-bin/issues"
-CI = "https://github.com/Krishap-s/self-bin/actions"
-
-[project.entry-points.console_scripts]
-self-bin = "self_bin.cli:cli"
-
-[project.optional-dependencies]
-test = ["pytest"]
-
 [tool.poetry]
 name = "self-bin"
 version = "0.1.0"
 description = "Self Hosted Request Bin and HTTP Bin"
 authors = ["Krishap-s <krishap.s.sreenivasan@gmail.com>"]
-license = "Apache 2"
+license = "Apache-2.0"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
 readme = "README.md"
+repository = "https://github.com/Krishap-s/self-bin"
 
 [tool.poetry.dependencies]
 python = ">=3.8"
@@ -47,3 +23,12 @@ black = "^23.12.1"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+Homepage = "https://github.com/Krishap-s/self-bin"
+Changelog = "https://github.com/Krishap-s/self-bin/releases"
+Issues = "https://github.com/Krishap-s/self-bin/issues"
+CI = "https://github.com/Krishap-s/self-bin/actions"
+
+[tool.poetry.scripts]
+self-bin = "self_bin.cli:cli"
