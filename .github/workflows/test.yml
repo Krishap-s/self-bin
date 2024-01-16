@@ -6,13 +6,16 @@ permissions:
   contents: read
 
 jobs:
-  linting:
+  commit-linting:
     runs-on: ubuntu-latest
     steps:
-    - name: Conventional Commit Lint
-      uses: ahmadnassri/action-commit-lint@v2.0.4
-    - name: Super-Linter
-      uses: super-linter/super-linter@v5.7.2
+      - uses: ahmadnassri/action-commit-lint@v2.0.4
+    
+  code-linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: super-linter/super-linter@v5.7.2
+      
   test:
     runs-on: ubuntu-latest
     strategy:
