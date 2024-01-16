@@ -14,7 +14,12 @@ jobs:
   code-linting:
     runs-on: ubuntu-latest
     steps:
-      - uses: super-linter/super-linter@v5.7.2
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Super-Linter
+        uses: super-linter/super-linter@v5.7.2
       
   test:
     runs-on: ubuntu-latest
